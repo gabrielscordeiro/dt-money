@@ -6,7 +6,7 @@ export const Summary = () => {
         <SummaryContainer>
             <SummaryCard>
                 <header>
-                    <span>Input</span>
+                    <span>Income</span>
                     <ArrowCircleUp size={32} color="#00b37e"/>
                 </header>
 
@@ -15,7 +15,7 @@ export const Summary = () => {
 
             <SummaryCard>
                 <header>
-                    <span>Output</span>
+                    <span>Outcome</span>
                     <ArrowCircleDown size={32} color="#f75a68"/>
                 </header>
 

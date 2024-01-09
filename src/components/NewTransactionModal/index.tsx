@@ -1,5 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { Overlay, Content } from "./styles.ts";
+import { Overlay, Content, CloseButton } from "./styles.ts";
+import { X } from "phosphor-react";
 
 export const NewTransactionModal = () => {
     return (
@@ -7,6 +8,9 @@ export const NewTransactionModal = () => {
             <Overlay />
 
             <Content>
+                <CloseButton title="Close dialog">
+                    <X size={24} />
+                </CloseButton>
                 <Dialog.Title>New transaction</Dialog.Title>
                     <form action="">
                         <input type="text" placeholder="Description" required />
@@ -17,7 +21,6 @@ export const NewTransactionModal = () => {
                             Register
                         </button>
                     </form>
-                <Dialog.Close />
             </Content>
         </Dialog.Portal>
     )

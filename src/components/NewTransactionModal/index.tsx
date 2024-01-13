@@ -3,7 +3,7 @@ import { Overlay, Content, CloseButton, TransactionType, TransactionTypeButton }
 import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
 
 import * as z from 'zod'
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const newTransactionSchema = z.object({
@@ -17,11 +17,15 @@ type newTransactionFormInputs = z.infer<typeof newTransactionSchema>
 
 export const NewTransactionModal = () => {
     const {
+        control,
         register,
         handleSubmit,
         formState: { isSubmitting }
     } = useForm<newTransactionFormInputs>({
-        resolver: zodResolver(newTransactionSchema)
+        resolver: zodResolver(newTransactionSchema),
+        defaultValues: {
+            type: 'income'
+        }
     })
 
     function handleCreateNewTransaction(data: newTransactionFormInputs) {
@@ -61,17 +65,25 @@ export const NewTransactionModal = () => {
                         {...register('category')}
                     />
 
-                    <TransactionType>
-                        <TransactionTypeButton variant="income" value="income">
-                            <ArrowCircleUp size={24}/>
-                            Income
-                        </TransactionTypeButton>
+                    <Controller
+                        control={control}
+                        name="type"
+                        render={({ field }) => {
+                            return (
+                                <TransactionType onValueChange={field.onChange} value={field.value}>
+                                    <TransactionTypeButton variant="income" value="income">
+                                        <ArrowCircleUp size={24}/>
+                                        Income
+                                    </TransactionTypeButton>
 
-                        <TransactionTypeButton variant="outcome" value="outcome">
-                            <ArrowCircleDown size={24}/>
-                            Outcome
-                        </TransactionTypeButton>
-                    </TransactionType>
+                                    <TransactionTypeButton variant="outcome" value="outcome">
+                                        <ArrowCircleDown size={24}/>
+                                        Outcome
+                                    </TransactionTypeButton>
+                                </TransactionType>
+                            )
+                        }}
+                    />
 
                     <button type="submit" disabled={isSubmitting}>
                         Register

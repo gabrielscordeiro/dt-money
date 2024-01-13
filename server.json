@@ -4,7 +4,7 @@
       "id": 1,
       "description": "Website development",
       "type": "income",
-      "category": "sale",
+      "category": "Sale",
       "price": 14000,
       "createdAt": "2024-01-13T20:54:55.969Z"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "description": "Hamburger",
       "type": "outcome",
-      "category": "food",
+      "category": "Food",
       "price": 29.99,
       "createdAt": "2024-01-14T20:54:55.969Z"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "description": "Rocketseat One",
       "type": "outcome",
-      "category": "education",
+      "category": "Education",
       "price": 1980.00,
       "createdAt": "2024-01-15T20:54:55.969Z"
     }

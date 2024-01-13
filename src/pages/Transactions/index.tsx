@@ -6,6 +6,7 @@ import { SearchForm } from "./components/SearchForm";
 
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styles.ts";
 import { TransactionsContext } from "../../contexts/TransactionsContext.tsx";
+import { dateFormatter, priceFormatter } from "../../utils/formatter.ts";
 
 
 export const Transactions = () => {
@@ -25,11 +26,12 @@ export const Transactions = () => {
                             <td width="40%">{transaction.description}</td>
                             <td>
                                 <PriceHighlight variant={transaction.type}>
-                                    {transaction.price}
+                                    {transaction.type === 'outcome' && '- '}
+                                    {priceFormatter.format(transaction.price)}
                                 </PriceHighlight>
                             </td>
                             <td>{transaction.category}</td>
-                            <td>{transaction.createdAt}</td>
+                            <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
                         </tr>
                     ))}
 

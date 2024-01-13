@@ -15,6 +15,14 @@
       "category": "food",
       "price": 29.99,
       "createdAt": "2024-01-14T20:54:55.969Z"
+    },
+    {
+      "id": 3,
+      "description": "Rocketseat One",
+      "type": "outcome",
+      "category": "education",
+      "price": 1980.00,
+      "createdAt": "2024-01-15T20:54:55.969Z"
     }
   ]
 }

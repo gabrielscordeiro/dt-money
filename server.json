@@ -21,8 +21,24 @@
       "description": "Rocketseat One",
       "type": "outcome",
       "category": "Education",
-      "price": 1980.00,
+      "price": 1980,
       "createdAt": "2024-01-15T20:54:55.969Z"
+    },
+    {
+      "description": "App development",
+      "price": 10000,
+      "category": "Sale",
+      "type": "income",
+      "createdAt": "2024-01-14T23:22:05.030Z",
+      "id": 4
+    },
+    {
+      "description": "Pizza",
+      "price": 39,
+      "category": "Food",
+      "type": "outcome",
+      "createdAt": "2024-01-14T23:32:57.608Z",
+      "id": 5
     }
   ]
 }

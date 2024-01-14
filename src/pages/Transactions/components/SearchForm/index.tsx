@@ -1,10 +1,10 @@
-import { SearchFormContainer } from "./styles.ts";
-import { MagnifyingGlass } from "phosphor-react";
-import { useForm } from "react-hook-form";
-import * as z from "zod"
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useContext } from "react";
-import { TransactionsContext } from "../../../../contexts/TransactionsContext.tsx";
+import { SearchFormContainer } from './styles.ts'
+import { MagnifyingGlass } from 'phosphor-react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../../../contexts/TransactionsContext.tsx'
 
 const searchFormSchema = z.object({
     query: z.string()

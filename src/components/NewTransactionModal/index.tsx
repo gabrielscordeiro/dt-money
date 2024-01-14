@@ -1,12 +1,12 @@
-import * as Dialog from "@radix-ui/react-dialog";
-import { Overlay, Content, CloseButton, TransactionType, TransactionTypeButton } from "./styles.ts";
-import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
+import * as Dialog from '@radix-ui/react-dialog'
+import { Overlay, Content, CloseButton, TransactionType, TransactionTypeButton } from './styles.ts'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 
 import * as z from 'zod'
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useContext } from "react";
-import { TransactionsContext } from "../../contexts/TransactionsContext.tsx";
+import { Controller, useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../contexts/TransactionsContext.tsx'
 
 const newTransactionSchema = z.object({
     description: z.string(),

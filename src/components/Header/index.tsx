@@ -1,8 +1,8 @@
-import { HeaderContainer, HeaderContent, NewTransactionButton } from "./styles.ts";
+import { HeaderContainer, HeaderContent, NewTransactionButton } from './styles.ts'
 
 import logoImg from '../../assets/logo.svg'
-import * as Dialog from "@radix-ui/react-dialog";
-import { NewTransactionModal } from "../NewTransactionModal";
+import * as Dialog from '@radix-ui/react-dialog'
+import { NewTransactionModal } from '../NewTransactionModal'
 
 export const Header = () => {
     return (
